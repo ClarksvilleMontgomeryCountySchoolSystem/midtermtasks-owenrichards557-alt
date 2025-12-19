@@ -1,9 +1,9 @@
 #AFTER PASTING YOUR ANSWER YOU MUST REMOVE THE LINE "import s"
 #YOUR CODE WILL FAIL IF YOU DO NOT DELETE THE LINE!!!!!!!!!!!!!
-import s
+
 
 # Testing flag - will be set by test
-TESTING = True
+TESTING = False
 item = None
 price = None
 quantity = None
@@ -26,7 +26,6 @@ Enchanted........$65.99
 Potion of Luck......$11.99
 Crytal Ball.....$39.99
 """)
-print(s.menu)
 
 
 # Shopkeeper's rule: All purchases must be at least 3 items for good luck!
@@ -44,8 +43,8 @@ if not TESTING:
 # TODO: Calculate subtotal, tax, and total
 subtotal = float(price * quantity)
 # Tax rate: 9.5%
-tax_amount = subtotal * 0.095
-total = subtotal + tax_amount
+tax = subtotal * 0.095
+total = subtotal + tax
 
 # TODO: Round total to 2 decimal places using round()
 
@@ -58,6 +57,6 @@ print(f"{item} x{quantity} @ ${price} each")
 print("--------------------------")
 # Print subtotal, tax, and total here
 print(f"Subtotal: ${subtotal}")
-print(f"Tax ${tax_amount}")
-print(f"Total ${Total}")
+print(f"Tax ${tax}")
+print(f"Total ${total}")
 print("\nThank you for shopping at\nthe Peculiar Emporium!")
